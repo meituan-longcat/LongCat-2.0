@@ -66,7 +66,7 @@ LongCat-2.0 inherits N-gram Embedding from [LongCat-Flash-Lite](https://huggingf
 
 These two principles guarantee the robust superiority of N-gram Embedding compared to equivalent-sized pure MoE models.
 
-**For more details please refer to our blog(https://longcat.chat/blog/longcat-2.0/).**
+**For more details please refer to our [blog](https://longcat.chat/blog/longcat-2.0/).**
 
 ## Evaluation Results
 We evaluate LongCat-2.0 against leading proprietary and open-weight models across agentic, coding, search, productivity and foundational capabilities. Unless noted with *, all scores are measured in-house under a unified harness; per-benchmark best results are shown in bold.
