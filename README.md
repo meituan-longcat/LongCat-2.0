@@ -98,7 +98,7 @@ LongCat-2.0 can be deployed on both **GPU** and **NPU** platforms.
 
 ### GPU
 
-We have implemented basic adaptations in SGLang ([PR](https://github.com/HarryWu99/sglang/tree/feature/longcat_dsa)) to support the deployment of LongCat-2.0.
+We have implemented adaptations in SGLang ([PR](https://github.com/HarryWu99/sglang/tree/feature/longcat_dsa)) to support the deployment of LongCat-2.0.
 
 We recommend deploying with 16x H20 using a combination of Tensor Parallelism and Expert Parallelism.
 
