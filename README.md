@@ -91,6 +91,50 @@ We evaluate LongCat-2.0 against leading proprietary and open-weight models acros
 
 ## Deployment
 
+LongCat-2.0 can be deployed on both **GPU** and **NPU** platforms.
+
+### GPU
+
+We have implemented basic adaptations in SGLang ([PR](https://github.com/HarryWu99/sglang/tree/feature/longcat_dsa)) to support the deployment of LongCat-2.0.
+
+We recommend deploying with 16x H20 using a combination of Tensor Parallelism and Expert Parallelism.
+
+Compile and update sgl-kernel first.
+
+```shell
+cd sgl-kernel
+python3 -m uv build --wheel --color=always --no-build-isolation \
+        -Ccmake.define.SGL_KERNEL_ENABLE_SM90A=1 \
+        -Ccmake.define.CMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -Cbuild-dir=build .
+pip3 install dist/sgl_kernel-0.3.21-cp310-abi3-linux_x86_64.whl --force-reinstall
+```
+
+Then launch the server.
+
+```py
+python -m sglang.launch_server \
+  --model meituan-longcat/LongCat-2.0-FP8 \
+  --trust-remote-code \
+  --host 0.0.0.0 \
+  --port 13423 \
+  --tp 16 \
+  --ep 16 \
+  --max-running-requests 64 \
+  --mem-fraction-static 0.92 \
+  --chunked-prefill-size 2048 \
+  --nsa-prefill-backend fa3 \
+  --kv-cache-dtype bfloat16 \
+  --nnodes 2 \
+  --node-rank 0 \
+  --dist-init-addr 33.32.48.42:20000 \
+  2>&1 | tee sgl.log
+```
+
+### NPU
+
+For NPU deployment, please refer to [SGLang-FluentLLM](https://github.com/meituan-longcat/SGLang-FluentLLM/tree/feature/npu/README.md).
+
 ## Chat Website
 You can chat with LongCat-2.0 on our official website: [https://longcat.chat/](https://longcat.chat/).
 
