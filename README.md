@@ -89,6 +89,9 @@ We evaluate LongCat-2.0 against leading proprietary and open-weight models acros
 
 ## Quick Start
 
+## Chat Website
+You can chat with LongCat-2.0 on our official website: [https://longcat.chat/](https://longcat.chat/).
+
 ## Deployment
 
 LongCat-2.0 can be deployed on both **GPU** and **NPU** platforms.
@@ -134,9 +137,6 @@ python -m sglang.launch_server \
 ### NPU
 
 For NPU deployment, please refer to [SGLang-FluentLLM](https://github.com/meituan-longcat/SGLang-FluentLLM/tree/feature/npu/README.md).
-
-## Chat Website
-You can chat with LongCat-2.0 on our official website: [https://longcat.chat/](https://longcat.chat/).
 
 ## License Agreement
 
