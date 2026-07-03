@@ -296,7 +296,7 @@ messages = [
 ]
 
 # thinking mode on
-content_think = tokenizer.apply_chat_template(
+prompt_think = tokenizer.apply_chat_template(
     messages,
     tools=tools,
     tokenize=False,
@@ -305,7 +305,7 @@ content_think = tokenizer.apply_chat_template(
 )
 
 # thinking mode on, keeping all reasoning content for better performance
-content_full = tokenizer.apply_chat_template(
+prompt_full = tokenizer.apply_chat_template(
     messages,
     tools=tools,
     tokenize=False,
@@ -315,7 +315,7 @@ content_full = tokenizer.apply_chat_template(
 )
 
 # thinking mode off, for better token efficiency
-content_no_think = tokenizer.apply_chat_template(
+prompt_no_think = tokenizer.apply_chat_template(
     messages,
     tools=tools,
     tokenize=False,
