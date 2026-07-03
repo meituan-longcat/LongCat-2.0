@@ -69,23 +69,118 @@ These two principles guarantee the robust superiority of N-gram Embedding compar
 **For more details please refer to our [blog](https://longcat.chat/blog/longcat-2.0/).**
 
 ## Evaluation Results
-We evaluate LongCat-2.0 against leading proprietary and open-weight models across agentic, coding, search, productivity and foundational capabilities. Unless noted with *, all scores are measured in-house under a unified harness; per-benchmark best results are shown in bold.
+We evaluate LongCat-2.0 against leading proprietary and open-weight models across agentic, coding, search, productivity and foundational capabilities. Unless noted with `*`, all scores are measured in-house under a unified harness; per-benchmark best results are shown in bold.
 
-| Benchmark | LongCat-2.0 | Gemini 3.1 Pro | GPT-5.5 | Claude Opus 4.6 | Claude Opus 4.7 | Claude Opus 4.8 |
-|---|:-:|:-:|:-:|:-:|:-:|:-:|
-| **Code Agent** | | | | | | |
-| Terminal-Bench 2.1 | **70.8** | 70.7* | 73.8* | - | 71.7* | 78.9* |
-| SWE-bench Pro | **59.5** | 54.2* | 58.6* | 57.3* | 64.3* | 69.2* |
-| SWE-bench Multilingual | **77.3** | 76.9* | - | 77.8* | 80.5* | 84.8* |
-| **General Agent** | | | | | | |
-| FORTE † | 73.2 | 70.3 | **77.8** | 73.2 | 77.6 | 77.2 |
-| BrowseComp | 79.9 | **85.9*** | 84.4* | 84.0* | 79.3* | 84.3* |
-| RWSearch | 78.8 | 76.3 | **85.3** | 81.3 | 79.3 | 77.3 |
-| **Foundational** | | | | | | |
-| IFEval | 90.0 | **96.1** | 95.0 | 92.2 | 88.7 | 86.0 |
-| Writing Bench | 83.8 | 83.7 | **84.7** | - | 85.3 | 85.2 |
-| IMO-AnswerBench | **81.8** | **90.0** | 79.5 | 75.3* | 81.8 | 75.3 |
-| GPQA-diamond | 88.9 | **94.3*** | 93.6* | 91.3* | **94.2*** | 92.4 |
+<table>
+<thead>
+<tr>
+<th>Benchmark</th>
+<th align="center">LongCat-2.0</th>
+<th align="center">Gemini 3.1 Pro</th>
+<th align="center">GPT-5.5</th>
+<th align="center">Claude Opus 4.6</th>
+<th align="center">Claude Opus 4.7</th>
+<th align="center">Claude Opus 4.8</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="7" align="center"><strong>Code Agent</strong></td></tr>
+<tr>
+<td>Terminal-Bench 2.1</td>
+<td align="center"><strong>70.8</strong></td>
+<td align="center">70.7*</td>
+<td align="center">73.8*</td>
+<td align="center">-</td>
+<td align="center">71.7*</td>
+<td align="center">78.9*</td>
+</tr>
+<tr>
+<td>SWE-bench Pro</td>
+<td align="center"><strong>59.5</strong></td>
+<td align="center">54.2*</td>
+<td align="center">58.6*</td>
+<td align="center">57.3*</td>
+<td align="center">64.3*</td>
+<td align="center">69.2*</td>
+</tr>
+<tr>
+<td>SWE-bench Multilingual</td>
+<td align="center"><strong>77.3</strong></td>
+<td align="center">76.9*</td>
+<td align="center">-</td>
+<td align="center">77.8*</td>
+<td align="center">80.5*</td>
+<td align="center">84.8*</td>
+</tr>
+<tr><td colspan="7" align="center"><strong>General Agent</strong></td></tr>
+<tr>
+<td>FORTE <a href="https://github.com/AGI-Eval-Official/FORTE">↗</a></td>
+<td align="center">73.2</td>
+<td align="center">70.3</td>
+<td align="center"><strong>77.8</strong></td>
+<td align="center">73.2</td>
+<td align="center">77.6</td>
+<td align="center">77.2</td>
+</tr>
+<tr>
+<td>BrowseComp</td>
+<td align="center">79.9</td>
+<td align="center"><strong>85.9*</strong></td>
+<td align="center">84.4*</td>
+<td align="center">84.0*</td>
+<td align="center">79.3*</td>
+<td align="center">84.3*</td>
+</tr>
+<tr>
+<td>RWSearch <a href="https://github.com/AGI-Eval-Official/RW-Search">↗</a></td>
+<td align="center">78.8</td>
+<td align="center">76.3</td>
+<td align="center"><strong>85.3</strong></td>
+<td align="center">81.3</td>
+<td align="center">79.3</td>
+<td align="center">77.3</td>
+</tr>
+<tr><td colspan="7" align="center"><strong>Foundational</strong></td></tr>
+<tr>
+<td>IFEval</td>
+<td align="center">90.0</td>
+<td align="center"><strong>96.1</strong></td>
+<td align="center">95.0</td>
+<td align="center">92.2</td>
+<td align="center">88.7</td>
+<td align="center">86.0</td>
+</tr>
+<tr>
+<td>Writing Bench</td>
+<td align="center">83.8</td>
+<td align="center">83.7</td>
+<td align="center"><strong>84.7</strong></td>
+<td align="center">-</td>
+<td align="center">85.3</td>
+<td align="center">85.2</td>
+</tr>
+<tr>
+<td>IMO-AnswerBench</td>
+<td align="center">81.8</td>
+<td align="center"><strong>90.0</strong></td>
+<td align="center">79.5</td>
+<td align="center">75.3*</td>
+<td align="center">81.8</td>
+<td align="center">75.3</td>
+</tr>
+<tr>
+<td>GPQA-diamond</td>
+<td align="center">88.9</td>
+<td align="center"><strong>94.3*</strong></td>
+<td align="center">93.6*</td>
+<td align="center">91.3*</td>
+<td align="center">94.2*</td>
+<td align="center">92.4</td>
+</tr>
+</tbody>
+</table>
+
+Notes: `*` — cited from the model's official report; `-` — no comparable public score.
 
 ## Quick Start
 
