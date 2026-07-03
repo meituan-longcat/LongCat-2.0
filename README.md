@@ -74,108 +74,108 @@ We evaluate LongCat-2.0 against leading proprietary and open-weight models acros
 <table>
 <thead>
 <tr>
-<th>Benchmark</th>
-<th align="center">LongCat-2.0</th>
-<th align="center">Gemini 3.1 Pro</th>
-<th align="center">GPT-5.5</th>
-<th align="center">Claude Opus 4.6</th>
-<th align="center">Claude Opus 4.7</th>
-<th align="center">Claude Opus 4.8</th>
+<th align="center"><div align="center">Benchmark</div></th>
+<th align="center"><div align="center">LongCat-2.0</div></th>
+<th align="center"><div align="center">Gemini 3.1 Pro</div></th>
+<th align="center"><div align="center">GPT-5.5</div></th>
+<th align="center"><div align="center">Claude Opus 4.6</div></th>
+<th align="center"><div align="center">Claude Opus 4.7</div></th>
+<th align="center"><div align="center">Claude Opus 4.8</div></th>
 </tr>
 </thead>
 <tbody>
-<tr><td colspan="7" align="center"><strong>Code Agent</strong></td></tr>
+<tr><td colspan="7"><div align="center"><strong>Code Agent</strong></div></td></tr>
 <tr>
-<td>Terminal-Bench 2.1</td>
-<td align="center"><strong>70.8</strong></td>
-<td align="center">70.7*</td>
-<td align="center">73.8*</td>
-<td align="center">-</td>
-<td align="center">71.7*</td>
-<td align="center">78.9*</td>
+<td align="center"><div align="center">Terminal-Bench 2.1</div></td>
+<td align="center"><div align="center"><strong>70.8</strong></div></td>
+<td align="center"><div align="center">70.7*</div></td>
+<td align="center"><div align="center">73.8*</div></td>
+<td align="center"><div align="center">-</div></td>
+<td align="center"><div align="center">71.7*</div></td>
+<td align="center"><div align="center">78.9*</div></td>
 </tr>
 <tr>
-<td>SWE-bench Pro</td>
-<td align="center"><strong>59.5</strong></td>
-<td align="center">54.2*</td>
-<td align="center">58.6*</td>
-<td align="center">57.3*</td>
-<td align="center">64.3*</td>
-<td align="center">69.2*</td>
+<td align="center"><div align="center">SWE-bench Pro</div></td>
+<td align="center"><div align="center"><strong>59.5</strong></div></td>
+<td align="center"><div align="center">54.2*</div></td>
+<td align="center"><div align="center">58.6*</div></td>
+<td align="center"><div align="center">57.3*</div></td>
+<td align="center"><div align="center">64.3*</div></td>
+<td align="center"><div align="center">69.2*</div></td>
 </tr>
 <tr>
-<td>SWE-bench Multilingual</td>
-<td align="center"><strong>77.3</strong></td>
-<td align="center">76.9*</td>
-<td align="center">-</td>
-<td align="center">77.8*</td>
-<td align="center">80.5*</td>
-<td align="center">84.8*</td>
+<td align="center"><div align="center">SWE-bench Multilingual</div></td>
+<td align="center"><div align="center"><strong>77.3</strong></div></td>
+<td align="center"><div align="center">76.9*</div></td>
+<td align="center"><div align="center">-</div></td>
+<td align="center"><div align="center">77.8*</div></td>
+<td align="center"><div align="center">80.5*</div></td>
+<td align="center"><div align="center">84.8*</div></td>
 </tr>
-<tr><td colspan="7" align="center"><strong>General Agent</strong></td></tr>
+<tr><td colspan="7"><div align="center"><strong>General Agent</strong></div></td></tr>
 <tr>
-<td>FORTE <a href="https://github.com/AGI-Eval-Official/FORTE">↗</a></td>
-<td align="center">73.2</td>
-<td align="center">70.3</td>
-<td align="center"><strong>77.8</strong></td>
-<td align="center">73.2</td>
-<td align="center">77.6</td>
-<td align="center">77.2</td>
-</tr>
-<tr>
-<td>BrowseComp</td>
-<td align="center">79.9</td>
-<td align="center"><strong>85.9*</strong></td>
-<td align="center">84.4*</td>
-<td align="center">84.0*</td>
-<td align="center">79.3*</td>
-<td align="center">84.3*</td>
+<td align="center"><div align="center">FORTE <a href="https://github.com/AGI-Eval-Official/FORTE">↗</a></div></td>
+<td align="center"><div align="center">73.2</div></td>
+<td align="center"><div align="center">70.3</div></td>
+<td align="center"><div align="center"><strong>77.8</strong></div></td>
+<td align="center"><div align="center">73.2</div></td>
+<td align="center"><div align="center">77.6</div></td>
+<td align="center"><div align="center">77.2</div></td>
 </tr>
 <tr>
-<td>RWSearch <a href="https://github.com/AGI-Eval-Official/RW-Search">↗</a></td>
-<td align="center">78.8</td>
-<td align="center">76.3</td>
-<td align="center"><strong>85.3</strong></td>
-<td align="center">81.3</td>
-<td align="center">79.3</td>
-<td align="center">77.3</td>
-</tr>
-<tr><td colspan="7" align="center"><strong>Foundational</strong></td></tr>
-<tr>
-<td>IFEval</td>
-<td align="center">90.0</td>
-<td align="center"><strong>96.1</strong></td>
-<td align="center">95.0</td>
-<td align="center">92.2</td>
-<td align="center">88.7</td>
-<td align="center">86.0</td>
+<td align="center"><div align="center">BrowseComp</div></td>
+<td align="center"><div align="center">79.9</div></td>
+<td align="center"><div align="center"><strong>85.9*</strong></div></td>
+<td align="center"><div align="center">84.4*</div></td>
+<td align="center"><div align="center">84.0*</div></td>
+<td align="center"><div align="center">79.3*</div></td>
+<td align="center"><div align="center">84.3*</div></td>
 </tr>
 <tr>
-<td>Writing Bench</td>
-<td align="center">83.8</td>
-<td align="center">83.7</td>
-<td align="center"><strong>84.7</strong></td>
-<td align="center">-</td>
-<td align="center">85.3</td>
-<td align="center">85.2</td>
+<td align="center"><div align="center">RWSearch <a href="https://github.com/AGI-Eval-Official/RW-Search">↗</a></div></td>
+<td align="center"><div align="center">78.8</div></td>
+<td align="center"><div align="center">76.3</div></td>
+<td align="center"><div align="center"><strong>85.3</strong></div></td>
+<td align="center"><div align="center">81.3</div></td>
+<td align="center"><div align="center">79.3</div></td>
+<td align="center"><div align="center">77.3</div></td>
+</tr>
+<tr><td colspan="7"><div align="center"><strong>Foundational</strong></div></td></tr>
+<tr>
+<td align="center"><div align="center">IFEval</div></td>
+<td align="center"><div align="center">90.0</div></td>
+<td align="center"><div align="center"><strong>96.1</strong></div></td>
+<td align="center"><div align="center">95.0</div></td>
+<td align="center"><div align="center">92.2</div></td>
+<td align="center"><div align="center">88.7</div></td>
+<td align="center"><div align="center">86.0</div></td>
 </tr>
 <tr>
-<td>IMO-AnswerBench</td>
-<td align="center">81.8</td>
-<td align="center"><strong>90.0</strong></td>
-<td align="center">79.5</td>
-<td align="center">75.3*</td>
-<td align="center">81.8</td>
-<td align="center">75.3</td>
+<td align="center"><div align="center">Writing Bench</div></td>
+<td align="center"><div align="center">83.8</div></td>
+<td align="center"><div align="center">83.7</div></td>
+<td align="center"><div align="center"><strong>84.7</strong></div></td>
+<td align="center"><div align="center">-</div></td>
+<td align="center"><div align="center">85.3</div></td>
+<td align="center"><div align="center">85.2</div></td>
 </tr>
 <tr>
-<td>GPQA-diamond</td>
-<td align="center">88.9</td>
-<td align="center"><strong>94.3*</strong></td>
-<td align="center">93.6*</td>
-<td align="center">91.3*</td>
-<td align="center">94.2*</td>
-<td align="center">92.4</td>
+<td align="center"><div align="center">IMO-AnswerBench</div></td>
+<td align="center"><div align="center">81.8</div></td>
+<td align="center"><div align="center"><strong>90.0</strong></div></td>
+<td align="center"><div align="center">79.5</div></td>
+<td align="center"><div align="center">75.3*</div></td>
+<td align="center"><div align="center">81.8</div></td>
+<td align="center"><div align="center">75.3</div></td>
+</tr>
+<tr>
+<td align="center"><div align="center">GPQA-diamond</div></td>
+<td align="center"><div align="center">88.9</div></td>
+<td align="center"><div align="center"><strong>94.3*</strong></div></td>
+<td align="center"><div align="center">93.6*</div></td>
+<td align="center"><div align="center">91.3*</div></td>
+<td align="center"><div align="center">94.2*</div></td>
+<td align="center"><div align="center">92.4</div></td>
 </tr>
 </tbody>
 </table>
