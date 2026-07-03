@@ -52,7 +52,7 @@ LongCat-2.0 is deeply integrated with mainstream harnesses such as Claude Code, 
 ### Key Features
 
 #### 🌟 LongCat Sparse Attention
-To address the output discontinuity and quadratic scoring bottleneck of the Lightning Indexer in [DSA](https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Exp), we introduce LongCat Sparse Attention (LSA). LSA features three orthogonal improvements:
+To address the output discontinuity and quadratic scoring bottleneck of the Lightning Indexer in [DSA](https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Exp), we introduce LongCat Sparse Attention (LSA). LSA features three orthogonal, plug-and-play improvements:
 
 - Streaming-aware Indexing (SI) reshapes the token selection budget to combine hardware-aligned contiguous access with dynamic random selection. This turns fragmented memory access into predictable sequential reads, achieving coalesced HBM access and high effective bandwidth.
 - Cross-Layer Indexing (CLI) leverages the empirical stability of attention saliency across adjacent layers to amortize indexing cost: a single indexing pass serves several consecutive layers at inference time, made possible by cross-layer distillation during training.
@@ -71,7 +71,7 @@ These two principles guarantee the robust superiority of N-gram Embedding compar
 **For more details please refer to our [blog](https://longcat.chat/blog/longcat-2.0/).**
 
 ## Evaluation Results
-We evaluate LongCat-2.0 against leading proprietary models across agentic, coding, search, productivity and foundational capabilities. Unless noted with `*`, all scores are measured in-house under a unified harness; per-benchmark best results are shown in bold.
+We evaluate LongCat-2.0 against leading proprietary and open-weight models across agentic, coding, search, productivity and foundational capabilities. Unless noted with `*`, all scores are measured in-house under a unified harness; per-benchmark best results are shown in bold.
 
 <table>
 <thead>
@@ -89,7 +89,7 @@ We evaluate LongCat-2.0 against leading proprietary models across agentic, codin
 <tr><td colspan="7"><div align="center"><strong>Code Agent</strong></div></td></tr>
 <tr>
 <td align="center"><div align="center">Terminal-Bench 2.1</div></td>
-<td align="center"><div align="center"><strong>70.8</strong></div></td>
+<td align="center"><div align="center">70.8</div></td>
 <td align="center"><div align="center">70.7*</div></td>
 <td align="center"><div align="center">73.8*</div></td>
 <td align="center"><div align="center">-</div></td>
@@ -98,7 +98,7 @@ We evaluate LongCat-2.0 against leading proprietary models across agentic, codin
 </tr>
 <tr>
 <td align="center"><div align="center">SWE-bench Pro</div></td>
-<td align="center"><div align="center"><strong>59.5</strong></div></td>
+<td align="center"><div align="center">59.5</div></td>
 <td align="center"><div align="center">54.2*</div></td>
 <td align="center"><div align="center">58.6*</div></td>
 <td align="center"><div align="center">57.3*</div></td>
@@ -107,7 +107,7 @@ We evaluate LongCat-2.0 against leading proprietary models across agentic, codin
 </tr>
 <tr>
 <td align="center"><div align="center">SWE-bench Multilingual</div></td>
-<td align="center"><div align="center"><strong>77.3</strong></div></td>
+<td align="center"><div align="center">77.3</div></td>
 <td align="center"><div align="center">76.9*</div></td>
 <td align="center"><div align="center">-</div></td>
 <td align="center"><div align="center">77.8*</div></td>
@@ -119,7 +119,7 @@ We evaluate LongCat-2.0 against leading proprietary models across agentic, codin
 <td align="center"><div align="center">FORTE <a href="https://github.com/AGI-Eval-Official/FORTE">↗</a></div></td>
 <td align="center"><div align="center">73.2</div></td>
 <td align="center"><div align="center">70.3</div></td>
-<td align="center"><div align="center"><strong>77.8</strong></div></td>
+<td align="center"><div align="center">77.8</div></td>
 <td align="center"><div align="center">73.2</div></td>
 <td align="center"><div align="center">77.6</div></td>
 <td align="center"><div align="center">77.2</div></td>
@@ -127,7 +127,7 @@ We evaluate LongCat-2.0 against leading proprietary models across agentic, codin
 <tr>
 <td align="center"><div align="center">BrowseComp</div></td>
 <td align="center"><div align="center">79.9</div></td>
-<td align="center"><div align="center"><strong>85.9*</strong></div></td>
+<td align="center"><div align="center">85.9*</div></td>
 <td align="center"><div align="center">84.4*</div></td>
 <td align="center"><div align="center">84.0*</div></td>
 <td align="center"><div align="center">79.3*</div></td>
@@ -137,7 +137,7 @@ We evaluate LongCat-2.0 against leading proprietary models across agentic, codin
 <td align="center"><div align="center">RWSearch <a href="https://github.com/AGI-Eval-Official/RW-Search">↗</a></div></td>
 <td align="center"><div align="center">78.8</div></td>
 <td align="center"><div align="center">76.3</div></td>
-<td align="center"><div align="center"><strong>85.3</strong></div></td>
+<td align="center"><div align="center">85.3</div></td>
 <td align="center"><div align="center">81.3</div></td>
 <td align="center"><div align="center">79.3</div></td>
 <td align="center"><div align="center">77.3</div></td>
@@ -146,7 +146,7 @@ We evaluate LongCat-2.0 against leading proprietary models across agentic, codin
 <tr>
 <td align="center"><div align="center">IFEval</div></td>
 <td align="center"><div align="center">90.0</div></td>
-<td align="center"><div align="center"><strong>96.1</strong></div></td>
+<td align="center"><div align="center">96.1</div></td>
 <td align="center"><div align="center">95.0</div></td>
 <td align="center"><div align="center">92.2</div></td>
 <td align="center"><div align="center">88.7</div></td>
@@ -156,7 +156,7 @@ We evaluate LongCat-2.0 against leading proprietary models across agentic, codin
 <td align="center"><div align="center">Writing Bench</div></td>
 <td align="center"><div align="center">83.8</div></td>
 <td align="center"><div align="center">83.7</div></td>
-<td align="center"><div align="center"><strong>84.7</strong></div></td>
+<td align="center"><div align="center">84.7</div></td>
 <td align="center"><div align="center">-</div></td>
 <td align="center"><div align="center">85.3</div></td>
 <td align="center"><div align="center">85.2</div></td>
@@ -164,7 +164,7 @@ We evaluate LongCat-2.0 against leading proprietary models across agentic, codin
 <tr>
 <td align="center"><div align="center">IMO-AnswerBench</div></td>
 <td align="center"><div align="center">81.8</div></td>
-<td align="center"><div align="center"><strong>90.0</strong></div></td>
+<td align="center"><div align="center">90.0</div></td>
 <td align="center"><div align="center">79.5</div></td>
 <td align="center"><div align="center">75.3*</div></td>
 <td align="center"><div align="center">81.8</div></td>
@@ -173,7 +173,7 @@ We evaluate LongCat-2.0 against leading proprietary models across agentic, codin
 <tr>
 <td align="center"><div align="center">GPQA-diamond</div></td>
 <td align="center"><div align="center">88.9</div></td>
-<td align="center"><div align="center"><strong>94.3*</strong></div></td>
+<td align="center"><div align="center">94.3*</div></td>
 <td align="center"><div align="center">93.6*</div></td>
 <td align="center"><div align="center">91.3*</div></td>
 <td align="center"><div align="center">94.2*</div></td>
@@ -184,6 +184,8 @@ We evaluate LongCat-2.0 against leading proprietary models across agentic, codin
 
 Notes: `*` — cited from the model's official report; `-` — no comparable public score.
 
+## Quick Start
+
 ## Chat Website
 You can chat with LongCat-2.0 on our official website: [https://longcat.chat/](https://longcat.chat/).
 
@@ -193,7 +195,7 @@ LongCat-2.0 can be deployed on both **GPU** and **NPU** platforms.
 
 ### GPU
 
-We have implemented adaptations in SGLang ([PR](https://github.com/HarryWu99/sglang/tree/feature/longcat_dsa)) to support the deployment of LongCat-2.0. Hierarchical indexing is not supported for simplicity.
+We have implemented adaptations in SGLang ([PR](https://github.com/HarryWu99/sglang/tree/feature/longcat_dsa)) to support the deployment of LongCat-2.0.
 
 We recommend deploying with 16x H20 using a combination of Tensor Parallelism and Expert Parallelism.
 
@@ -337,6 +339,8 @@ Developers should take into account the known limitations of large language mode
 It is the responsibility of developers and downstream users to understand and comply with all applicable laws and regulations relevant to their use case, including but not limited to data protection, privacy, and content safety requirements. 
 
 Nothing in this Model Card should be interpreted as altering or restricting the terms of the MIT License under which the model is released.
+
+## Citation
 
 ## Contact
 Please contact us at <a href="mailto:longcat-team@meituan.com">longcat-team@meituan.com</a> or join our WeChat Group if you have any questions.
