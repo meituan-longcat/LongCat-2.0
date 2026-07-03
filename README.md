@@ -84,7 +84,7 @@ We evaluate LongCat-2.0 against leading proprietary and open-weight models acros
 </tr>
 </thead>
 <tbody>
-<tr><td colspan="7" align="center"><strong>Code Agent</strong></td></tr>
+<tr><td colspan="7"><div align="center"><strong>Code Agent</strong></div></td></tr>
 <tr>
 <td>Terminal-Bench 2.1</td>
 <td align="center"><strong>70.8</strong></td>
@@ -112,7 +112,7 @@ We evaluate LongCat-2.0 against leading proprietary and open-weight models acros
 <td align="center">80.5*</td>
 <td align="center">84.8*</td>
 </tr>
-<tr><td colspan="7" align="center"><strong>General Agent</strong></td></tr>
+<tr><td colspan="7"><div align="center"><strong>General Agent</strong></div></td></tr>
 <tr>
 <td>FORTE <a href="https://github.com/AGI-Eval-Official/FORTE">↗</a></td>
 <td align="center">73.2</td>
@@ -140,7 +140,7 @@ We evaluate LongCat-2.0 against leading proprietary and open-weight models acros
 <td align="center">79.3</td>
 <td align="center">77.3</td>
 </tr>
-<tr><td colspan="7" align="center"><strong>Foundational</strong></td></tr>
+<tr><td colspan="7"><div align="center"><strong>Foundational</strong></div></td></tr>
 <tr>
 <td>IFEval</td>
 <td align="center">90.0</td>
