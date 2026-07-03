@@ -21,8 +21,8 @@
   <a href="https://github.com/meituan-longcat/LongCat-2.0/blob/main/figures/wechat_official_accounts.png" target="_blank" style="margin: 2px;">
     <img alt="Wechat" src="https://img.shields.io/badge/WeChat-LongCat-brightgreen?logo=wechat&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
   </a>
-  <a href="https://discord.com/invite/jmuv5TQzKU ">
-    <img src="https://img.shields.io/badge/Discord-Join%20Chat-5865F2?logo=discord&logoColor=white" />
+  <a href="https://discord.com/invite/jmuv5TQzKU" target="_blank" style="margin: 2px;">
+    <img alt="Discord" src="https://img.shields.io/badge/Discord-Join%20Chat-5865F2?logo=discord&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
   </a>
   <a href="https://x.com/Meituan_LongCat" target="_blank" style="margin: 2px;">
     <img alt="Twitter Follow" src="https://img.shields.io/badge/Twitter-LongCat-white?logo=x&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
