@@ -52,7 +52,7 @@ LongCat-2.0 is deeply integrated with mainstream harnesses such as Claude Code, 
 ### Key Features
 
 #### 🌟 LongCat Sparse Attention
-To address the output discontinuity and quadratic scoring bottleneck of the Lightning Indexer in [DSA](https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Exp), we introduce LongCat Sparse Attention (LSA). LSA features three orthogonal, plug-and-play improvements:
+To address the output discontinuity and quadratic scoring bottleneck of the Lightning Indexer in [DSA](https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Exp), we introduce LongCat Sparse Attention (LSA). LSA features three orthogonal improvements:
 
 - Streaming-aware Indexing (SI) reshapes the token selection budget to combine hardware-aligned contiguous access with dynamic random selection. This turns fragmented memory access into predictable sequential reads, achieving coalesced HBM access and high effective bandwidth.
 - Cross-Layer Indexing (CLI) leverages the empirical stability of attention saliency across adjacent layers to amortize indexing cost: a single indexing pass serves several consecutive layers at inference time, made possible by cross-layer distillation during training.
@@ -71,7 +71,7 @@ These two principles guarantee the robust superiority of N-gram Embedding compar
 **For more details please refer to our [blog](https://longcat.chat/blog/longcat-2.0/).**
 
 ## Evaluation Results
-We evaluate LongCat-2.0 against leading proprietary and open-weight models across agentic, coding, search, productivity and foundational capabilities. Unless noted with `*`, all scores are measured in-house under a unified harness.
+We evaluate LongCat-2.0 against leading proprietary models across agentic, coding, search, productivity and foundational capabilities. Unless noted with `*`, all scores are measured in-house under a unified harness.
 
 <table>
 <thead>
@@ -184,8 +184,6 @@ We evaluate LongCat-2.0 against leading proprietary and open-weight models acros
 
 Notes: `*` — cited from the model's official report; `-` — no comparable public score.
 
-## Quick Start
-
 ## Chat Website
 You can chat with LongCat-2.0 on our official website: [https://longcat.chat/](https://longcat.chat/).
 
@@ -195,7 +193,7 @@ LongCat-2.0 can be deployed on both **GPU** and **NPU** platforms.
 
 ### GPU
 
-We have implemented adaptations in SGLang ([PR](https://github.com/HarryWu99/sglang/tree/feature/longcat_dsa)) to support the deployment of LongCat-2.0.
+We have implemented adaptations in SGLang ([PR](https://github.com/HarryWu99/sglang/tree/feature/longcat_dsa)) to support the deployment of LongCat-2.0. Hierarchical indexing is not supported for simplicity.
 
 We recommend deploying with 16x H20 using a combination of Tensor Parallelism and Expert Parallelism.
 
@@ -339,8 +337,6 @@ Developers should take into account the known limitations of large language mode
 It is the responsibility of developers and downstream users to understand and comply with all applicable laws and regulations relevant to their use case, including but not limited to data protection, privacy, and content safety requirements. 
 
 Nothing in this Model Card should be interpreted as altering or restricting the terms of the MIT License under which the model is released.
-
-## Citation
 
 ## Contact
 Please contact us at <a href="mailto:longcat-team@meituan.com">longcat-team@meituan.com</a> or join our WeChat Group if you have any questions.
