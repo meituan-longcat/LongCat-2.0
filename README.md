@@ -235,6 +235,95 @@ python -m sglang.launch_server \
 
 For NPU deployment, please refer to [SGLang-FluentLLM](https://github.com/meituan-longcat/SGLang-FluentLLM/tree/feature/npu/README.md).
 
+## Chat Template
+
+We provide a chat template for LongCat-2.0 in the `tokenizer_config.json` file, which can be used to encode a list of messages into a single string for model input. 
+
+Here is a brief example of how to use the template:
+
+```python
+from transformers import AutoTokenizer
+
+tokenizer = AutoTokenizer.from_pretrained("meituan-longcat/LongCat-2.0", trust_remote_code=True)
+
+tools = [
+    {
+        "type": "function",
+        "function": {
+            "name": "func_add",
+            "description": "Calculate the sum of two numbers",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "x1": {"type": "number", "description": "The first number to add"},
+                    "x2": {"type": "number", "description": "The second number to add"},
+                },
+                "required": ["x1", "x2"],
+            },
+        },
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "func_multiply",
+            "description": "Calculate the product of two numbers",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "x1": {"type": "number", "description": "The first number to multiply"},
+                    "x2": {"type": "number", "description": "The second number to multiply"},
+                },
+                "required": ["x1", "x2"],
+            },
+        },
+    },
+]
+
+messages = [
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": "Calculate 1+1"},
+    {
+        "role": "assistant",
+        "reasoning_content": "Calling func_add to calculate 1+1",
+        # Note: unlike the standard OpenAI format, we expect `arguments` to be a dict rather than a string.
+        "tool_calls": [
+            {"type": "function", "function": {"name": "func_add", "arguments": {"x1": 1, "x2": 1}}},
+        ],
+    },
+    {"role": "tool", "name": "func_add", "content": '{"ans": 2}'},
+    {"role": "assistant", "reasoning_content": "The result is 2", "content": "2"},
+    {"role": "user", "content": "Check your answer, is it correct?"},
+]
+
+# thinking mode on
+content_think = tokenizer.apply_chat_template(
+    messages,
+    tools=tools,
+    tokenize=False,
+    enable_thinking=True,
+    add_generation_prompt=True
+)
+
+# thinking mode on, keeping all reasoning content for better performance
+content_full = tokenizer.apply_chat_template(
+    messages,
+    tools=tools,
+    tokenize=False,
+    enable_thinking=True,
+    add_generation_prompt=True,
+    save_reasoning_content=True
+)
+
+# thinking mode off, for better token efficiency
+content_no_think = tokenizer.apply_chat_template(
+    messages,
+    tools=tools,
+    tokenize=False,
+    enable_thinking=False,
+    add_generation_prompt=True
+)
+```
+
 ## License Agreement
 
 The **model weights** are released under the **MIT License**. 
