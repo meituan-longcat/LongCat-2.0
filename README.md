@@ -74,13 +74,13 @@ We evaluate LongCat-2.0 against leading proprietary and open-weight models acros
 <table>
 <thead>
 <tr>
-<th align="center">Benchmark</th>
-<th align="center">LongCat-2.0</th>
-<th align="center">Gemini 3.1 Pro</th>
-<th align="center">GPT-5.5</th>
-<th align="center">Claude Opus 4.6</th>
-<th align="center">Claude Opus 4.7</th>
-<th align="center">Claude Opus 4.8</th>
+<th align="center"><div align="center">Benchmark</div></th>
+<th align="center"><div align="center">LongCat-2.0</div></th>
+<th align="center"><div align="center">Gemini 3.1 Pro</div></th>
+<th align="center"><div align="center">GPT-5.5</div></th>
+<th align="center"><div align="center">Claude Opus 4.6</div></th>
+<th align="center"><div align="center">Claude Opus 4.7</div></th>
+<th align="center"><div align="center">Claude Opus 4.8</div></th>
 </tr>
 </thead>
 <tbody>
