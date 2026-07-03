@@ -39,9 +39,11 @@
 ## Model Introduction
 We introduce LongCat-2.0, a large-scale MoE language model with **1.6 trillion total parameters** and ~48 billion activated per token — a substantial step up from previous LongCat models, accompanied by several architectural improvements.
 
-Both the full training run and the large-scale deployment are built entirely on **AI ASIC superpods**. Pretraining spans millions of accelerator-hours across more than 35 trillion tokens, with no rollbacks or irrecoverable loss spikes — demonstrating that we have the capability to conduct frontier-scale training on alternative hardware platforms.
+Both the full training run and the large-scale deployment are built entirely on **AI ASIC superpods**. Pretraining spans millions of accelerator-days across more than 35 trillion tokens, with no rollbacks or irrecoverable loss spikes — demonstrating that we have the capability to conduct frontier-scale training on alternative hardware platforms.
 
 To strengthen the model on long-horizon tasks, we introduce LongCat Sparse Attention and train LongCat-2.0 on hundreds of billions of tokens of **1M-context** data. Together with dedicated post-training, this gives LongCat-2.0 strong performance on coding and agentic tasks.
+
+LongCat-2.0 is deeply integrated with mainstream harnesses such as Claude Code, OpenClaw, and Hermes, delivering strong performance across code understanding, repository-level edits, automated task execution, and agentic workflows — providing developers with a more stable and efficient collaborative experience.
 
 <div align="center">
   <img src="figures/longcat-pro-benchmark-charts-2026-06-29.svg" width="100%" alt="LongCat-2.0 Benchmark Charts" />
