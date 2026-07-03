@@ -185,7 +185,7 @@ We evaluate LongCat-2.0 against leading proprietary models across agentic, codin
 Notes: `*` — cited from the model's official report; `-` — no comparable public score.
 
 ## Chat Website
-You can chat with LongCat-2.0 on our official website: [https://longcat.chat/](https://longcat.chat/).
+You can chat with LongCat-2.0 on our official website: [https://longcat.ai/](https://longcat.ai/).
 
 ## Deployment
 
@@ -339,6 +339,6 @@ It is the responsibility of developers and downstream users to understand and co
 Nothing in this Model Card should be interpreted as altering or restricting the terms of the MIT License under which the model is released.
 
 ## Contact
-Please contact us at <a href="mailto:longcat-team@meituan.com">longcat-team@meituan.com</a> if you have any questions.
+Please contact us at <a href="mailto:longcat-team@meituan.com">longcat-team@meituan.com</a> or open an issue if you have any questions.
 
 ---
