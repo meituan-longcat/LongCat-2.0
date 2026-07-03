@@ -339,9 +339,6 @@ It is the responsibility of developers and downstream users to understand and co
 Nothing in this Model Card should be interpreted as altering or restricting the terms of the MIT License under which the model is released.
 
 ## Contact
-Please contact us at <a href="mailto:longcat-team@meituan.com">longcat-team@meituan.com</a> or join our WeChat Group if you have any questions.
-
-#### WeChat Group
-<img src=wechat-assets/Wechat.png width="200px">
+Please contact us at <a href="mailto:longcat-team@meituan.com">longcat-team@meituan.com</a> if you have any questions.
 
 ---
