@@ -234,7 +234,7 @@ python -m sglang.launch_server \
 
 ### NPU
 
-For NPU deployment, please refer to [SGLang-FluentLLM](https://github.com/meituan-longcat/SGLang-FluentLLM/tree/feature/npu/README.md).
+For NPU deployment, please refer to [SGLang-FluentLLM](https://github.com/meituan-longcat/SGLang-FluentLLM/blob/npu/npu_test/ReadMe.md).
 
 ## Chat Template
 
