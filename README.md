@@ -196,41 +196,7 @@ LongCat-2.0 can be deployed on both **GPU** and **NPU** platforms.
 
 ### GPU
 
-We have implemented adaptations in SGLang ([PR](https://github.com/sgl-project/sglang/pull/30042)) to support the deployment of LongCat-2.0. Hierarchical indexing is not supported for simplicity.
-
-We recommend deploying with 16x H20 using a combination of Tensor Parallelism and Expert Parallelism.
-
-Compile and update sgl-kernel first.
-
-```shell
-cd sgl-kernel
-python3 -m uv build --wheel --color=always --no-build-isolation \
-        -Ccmake.define.SGL_KERNEL_ENABLE_SM90A=1 \
-        -Ccmake.define.CMAKE_POLICY_VERSION_MINIMUM=3.5 \
-        -Cbuild-dir=build .
-pip3 install dist/sgl_kernel-0.3.21-cp310-abi3-linux_x86_64.whl --force-reinstall
-```
-
-Then launch the server.
-
-```py
-python -m sglang.launch_server \
-  --model meituan-longcat/LongCat-2.0-FP8 \
-  --trust-remote-code \
-  --host 0.0.0.0 \
-  --port 13423 \
-  --tp 16 \
-  --ep 16 \
-  --max-running-requests 64 \
-  --mem-fraction-static 0.92 \
-  --chunked-prefill-size 2048 \
-  --nsa-prefill-backend fa3 \
-  --kv-cache-dtype bfloat16 \
-  --nnodes 2 \
-  --node-rank 0 \
-  --dist-init-addr 33.32.48.42:20000 \
-  2>&1 | tee sgl.log
-```
+For GPU deployment, please refer to the [SGLang cookbook](https://docs.sglang.io/cookbook/autoregressive/Meituan/LongCat-2.0).
 
 ### NPU
 
