@@ -6,9 +6,9 @@
 <hr>
 
 <div align="center" style="line-height: 1;">
-  <!-- <a href="https://longcat.ai/" target="_blank" style="margin: 2px;">
-    <img alt="Chat" src="https://img.shields.io/badge/🤖%20Chat-LongCat--Flash--Chat-ADFF2F?color=29E154&logoColor=white"  fill-opacity="1" style="display: inline-block; vertical-align: middle;"/>
-  </a> -->
+  <a href="https://longcat.chat/" target="_blank" style="margin: 2px;">
+    <img alt="Chat" src="https://img.shields.io/badge/🤖%20Chat-LongCat-2.0-ADFF2F?color=29E154&logoColor=white" fill-opacity="1" style="display: inline-block; vertical-align: middle;"/>
+  </a>
   <a href="https://huggingface.co/meituan-longcat" target="_blank" style="margin: 2px;">
     <img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-LongCat-ffc107?color=ffc107&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
   </a>
@@ -46,10 +46,10 @@ Both the full training run and the large-scale deployment are built entirely on 
 
 To strengthen the model on long-horizon tasks, we introduce LongCat Sparse Attention and train LongCat-2.0 on hundreds of billions of tokens of **1M-context** data. Together with dedicated post-training, this gives LongCat-2.0 strong performance on coding and agentic tasks.
 
-LongCat-2.0 is deeply integrated with mainstream harnesses such as Claude Code, OpenClaw, and Hermes, delivering strong performance across code understanding, repository-level edits, automated task execution, and agentic workflows — providing developers with a more stable and efficient collaborative experience.
+LongCat-2.0 is deeply integrated with mainstream harnesses such as [Claude Code](docs/integrations/claude-code.md), [OpenClaw](docs/integrations/openclaw.md), and [Hermes](docs/integrations/hermes.md), delivering strong performance across code understanding, repository-level edits, automated task execution, and agentic workflows — providing developers with a more stable and efficient collaborative experience. See the [integration guides](docs/integrations/) for setup instructions.
 
 <div align="center">
-  <img src="figures/longcat-pro-benchmark-charts-2026-06-29.svg" width="100%" alt="LongCat-2.0 Benchmark Charts" />
+  <img src="figures/longcat-2.0-benchmark-charts-2026-06-29.svg" width="100%" alt="LongCat-2.0 Benchmark Charts" />
 </div>
 
 ### Key Features
